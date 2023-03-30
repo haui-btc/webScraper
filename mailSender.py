@@ -37,7 +37,7 @@ print(f"{latest_release_url}\n") """
 
 #===========================================================================
 
-# Email settings
+# Email
 SMTPserver = 'mail.gmx.net'
 sender =     'monitoring.analytics@gmx.ch'
 destination = ['sascha.hauenstein@pm.me']
