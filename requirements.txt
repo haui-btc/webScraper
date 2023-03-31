@@ -1,12 +1,5 @@
 requests
 requests_html
 beautifulsoup4
-email.mime.text
 smtplib
-sys
-time
 hashlib
-urllib.request
-datetime
-os
-re
