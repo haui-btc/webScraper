@@ -2,9 +2,10 @@
 import time
 import hashlib
 from urllib.request import urlopen, Request
+from releasenoteScraper import *
 
 # setting the URL you want to monitor
-url = Request('https://leetcode.com/',
+url = Request('https://www.20min.ch/',
 			headers={'User-Agent': 'Mozilla/5.0'})
 
 # to perform a GET request and load the
@@ -39,7 +40,8 @@ while True:
 		# if something changed in the hashes
 		else:
 			# notify
-			print("something changed")
+			print("detected changes on website, sending email")
+			send_email()
 
 			# again read the website
 			response = urlopen(url).read()
@@ -54,3 +56,6 @@ while True:
 	# To handle exceptions
 	except Exception as e:
 		print("error")
+
+	except KeyboardInterrupt:
+		print("Monitoring stopped by user") 

@@ -67,6 +67,3 @@ def send_email():
 
     except:
         sys.exit( "mail failed; %s" % "CUSTOM_ERROR" ) # give an error message
-
-send_email()
-
