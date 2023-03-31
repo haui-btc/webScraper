@@ -49,9 +49,7 @@ def send_email():
 
     # Email content
     content = f"Hi there, \n\n a new API release is available. \n\n {date}: \n {latest_release_name} \n {latest_release_url} \n\n All releases:\n {apiURL}"
-
-    text_subtype = 'plain'
-    
+    text_subtype = 'plain'    
     subject = "Dynatrace: New API version"
 
     try:
