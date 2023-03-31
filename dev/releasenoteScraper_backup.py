@@ -1,16 +1,19 @@
 import requests 
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup
+from email.mime.text import MIMEText
+from smtplib import SMTP_SSL as SMTP
 import sys
 import os
 import re
 
-#Webscraping
+# URLs
 baseURL = 'https://www.dynatrace.com'
 apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
 agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
 
+# Webscraping
 def get_api_release_notes():
     session = HTMLSession()
     page = session.get(apiURL)
@@ -25,10 +28,7 @@ def get_api_release_notes():
         releases.append(release)
     return releases
 
-#Email-Settings
-from email.mime.text import MIMEText
-from smtplib import SMTP_SSL as SMTP
-
+# Email-Settings
 def send_email():
     SMTPserver = 'mail.gmx.net'
     sender = 'monitoring.analytics@gmx.ch'
@@ -36,19 +36,20 @@ def send_email():
     USERNAME = "monitoring.analytics@gmx.ch"
     PASSWORD = "Monitoring2023!"
 
-    #show all releases
+    # grep all releases
     """ releases = get_api_release_notes()
 
     content = "New API releases:\n"
     for release in releases:
         content += "\n- {} ({})".format(release['name'], release['url']) """
 
-    #show latest release
+    # grep latest release
     releases = get_api_release_notes()
     latest_release = releases[0]
     latest_release_name = latest_release['name']
     latest_release_url = latest_release['url']
 
+    # Email content
     content = f"Hi there, \n\n a new API release is available. \n\n {latest_release_name}: \n {latest_release_url} \n\n All releases:\n {apiURL}"
 
     text_subtype = 'plain'
