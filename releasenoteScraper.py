@@ -6,6 +6,7 @@ from smtplib import SMTP_SSL as SMTP
 import sys
 import os
 import re
+import datetime
 
 # URLs
 baseURL = 'https://www.dynatrace.com'
@@ -43,6 +44,10 @@ def send_email():
     for release in releases:
         content += "\n- {} ({})".format(release['name'], release['url']) """
 
+    # get date
+    date = datetime.datetime.now()
+    date = date.strftime("%d. %B %Y")
+
     # grep latest release
     releases = get_api_release_notes()
     latest_release = releases[0]
@@ -50,7 +55,7 @@ def send_email():
     latest_release_url = latest_release['url']
 
     # Email content
-    content = f"Hi there, \n\n a new API release is available. \n\n {latest_release_name}: \n {latest_release_url} \n\n All releases:\n {apiURL}"
+    content = f"Hi there, \n\n a new API release is available. \n\n {date}: \n {latest_release_name} \n {latest_release_url} \n\n All releases:\n {apiURL}"
 
     text_subtype = 'plain'
     
