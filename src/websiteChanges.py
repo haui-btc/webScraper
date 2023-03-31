@@ -56,6 +56,3 @@ while True:
 	# To handle exceptions
 	except Exception as e:
 		print("error")
-
-	except KeyboardInterrupt:
-		print("Monitoring stopped by user") 
