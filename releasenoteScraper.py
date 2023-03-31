@@ -37,13 +37,6 @@ def send_email():
     USERNAME = "monitoring.analytics@gmx.ch"
     PASSWORD = "Monitoring2023!"
 
-    # grep all releases
-    """ releases = get_api_release_notes()
-
-    content = "New API releases:\n"
-    for release in releases:
-        content += "\n- {} ({})".format(release['name'], release['url']) """
-
     # get date
     date = datetime.datetime.now()
     date = date.strftime("%d. %B %Y")
