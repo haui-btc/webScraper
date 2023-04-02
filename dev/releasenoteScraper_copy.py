@@ -10,10 +10,11 @@ import re
 import datetime
 from requests.exceptions import RequestException
 import logging
+import urllib.error
 import time
 
 # create logger
-logging.basicConfig(filename='web_scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+""" logging.basicConfig(filename='webScraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s') """
 logging.info("script started")
 
 # URLs
@@ -105,4 +106,4 @@ def send_email():
         logging.error(f"Failed to send email: {str(e)}")
 
 # activate function for testing
-send_email() 
+#send_email() 

@@ -6,9 +6,10 @@ from releasenoteScraper import *
 import logging
 import sys
 import urllib.error
+from requests.exceptions import RequestException
 
 # create logger
-logging.basicConfig(filename='website_changes.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='web_scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info("script started")
 
 try:
@@ -20,19 +21,13 @@ try:
     logging.info("GET request to url")
     response = urlopen(url).read()
     
-except urllib.error.URLError as e:
-    logging.error("Failed to open URL")
-    #logging.exception('')
-    logging.error("exit the script")
-    sys.exit(1) # Exit the script with a non-zero exit code
-    
-    
-except Exception as e:
-    logging.error("An error occurred")
-    #logging.exception('')
-    logging.error("exit the script")
-    sys.exit(1) # Exit the script with a non-zero exit code
-    
+except RequestException as e:
+    logging.error(f"An error occurred while making the request: {e}")
+    sys.exit(0) # Exit the script with a non-zero exit code
+
+except Exception as e:        
+    logging.error(f"An unexpected error occurred: {e}")
+    sys.exit(0) # Exit the script with a non-zero exit code  
 
 # to create the initial hash
 logging.info("create initial hash")
@@ -63,8 +58,8 @@ while True:
 		newHash = hashlib.sha224(response).hexdigest()		
 
 		# check if new hash is same as the previous hash
-		if newHash == currentHash:
-			logging.info("compare hashes: no changes")
+		logging.info("compare hashes: no changes")
+		if newHash == currentHash:			
 			continue				
 
 		# if something changed in the hashes
@@ -92,12 +87,13 @@ while True:
 		logging.error("Failed to open URL")
 		#logging.exception('')
 		logging.error("exit the script")
-		sys.exit(1) # Exit the script with a non-zero exit code
-		
+		sys.exit(0) # Exit the script with a non-zero exit code		
     
 	except Exception as e:
 		logging.error("An error occurred")
 		#logging.exception('')
 		logging.error("exit the script")
-		sys.exit(1) # Exit the script with a non-zero exit code
+		sys.exit(0) # Exit the script with a non-zero exit code
+
+
 		
