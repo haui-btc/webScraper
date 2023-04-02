@@ -1,0 +1,45 @@
+2023-04-02 20:35:32,655 - INFO - script started
+2023-04-02 20:35:32,655 - INFO - run function: 'get_api_release_notes'
+2023-04-02 20:35:32,655 - INFO - start HTML session
+2023-04-02 20:35:32,655 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 20:35:32,791 - INFO - render html
+2023-04-02 20:35:32,909 - INFO - Browser listening on: ws://127.0.0.1:45353/devtools/browser/21d4a98f-d103-4a22-afc9-5f6e986fda4a
+2023-04-02 20:35:34,022 - INFO - parse html with BeatifulSoup
+2023-04-02 20:35:34,032 - INFO - grep defined html elements
+2023-04-02 20:35:34,033 - INFO - grep name and url
+2023-04-02 20:35:34,033 - INFO - grep latest release
+2023-04-02 20:35:34,033 - INFO - create email content with latest release info
+2023-04-02 20:35:34,033 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 20:35:34,214 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 20:35:34,336 - INFO - script started
+2023-04-02 20:35:34,336 - INFO - reading defined url
+2023-04-02 20:35:34,336 - INFO - GET request to url
+2023-04-02 20:35:34,664 - INFO - create initial hash
+2023-04-02 20:35:34,666 - INFO - wait 10 seconds
+2023-04-02 20:35:44,666 - INFO - GET request to url
+2023-04-02 20:35:44,953 - INFO - create hash
+2023-04-02 20:35:44,954 - INFO - wait 60 seconds
+2023-04-02 20:36:44,954 - INFO - GET request to url
+2023-04-02 20:36:45,152 - INFO - create new hash
+2023-04-02 20:36:45,153 - INFO - compare hashes: no changes
+2023-04-02 20:36:45,154 - INFO - compare hashes: detected changes, sending email
+2023-04-02 20:36:45,154 - INFO - run function: 'get_api_release_notes'
+2023-04-02 20:36:45,154 - INFO - start HTML session
+2023-04-02 20:36:45,154 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 20:36:45,288 - INFO - render html
+2023-04-02 20:36:45,403 - INFO - Browser listening on: ws://127.0.0.1:50259/devtools/browser/cc7f0d0e-c544-4253-80fe-b8c3cee5a67f
+2023-04-02 20:36:46,517 - INFO - parse html with BeatifulSoup
+2023-04-02 20:36:46,526 - INFO - grep defined html elements
+2023-04-02 20:36:46,527 - INFO - grep name and url
+2023-04-02 20:36:46,527 - INFO - grep latest release
+2023-04-02 20:36:46,527 - INFO - create email content with latest release info
+2023-04-02 20:36:46,527 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 20:36:46,688 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 20:36:46,824 - INFO - GET request to url
+2023-04-02 20:36:46,988 - INFO - create current hash
+2023-04-02 20:36:46,988 - INFO - wait 6o seconds
+2023-04-02 20:36:52,131 - INFO - terminate chrome process...
+2023-04-02 20:36:52,138 - INFO - connection closed
+2023-04-02 20:36:52,365 - INFO - terminate chrome process...
+2023-04-02 20:36:52,582 - INFO - connection closed
+2023-04-02 20:36:52,582 - INFO - terminate chrome process...

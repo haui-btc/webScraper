@@ -54,7 +54,7 @@ def get_api_release_notes():
 def send_email():
     SMTPserver = 'mail.gmx.net'
     sender = 'monitoring.analytics@gmx.ch'
-    destination = ['sascha.hauenstein@pm.me']
+    destination = ['haui_btc@protonmail.com']
     USERNAME = "monitoring.analytics@gmx.ch"
     PASSWORD = "Monitoring2023!"
 

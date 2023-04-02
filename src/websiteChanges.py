@@ -23,11 +23,11 @@ try:
     
 except RequestException as e:
     logging.error(f"An error occurred while making the request: {e}")
-    sys.exit(0) # Exit the script with a non-zero exit code
+    sys.exit(1) # Exit the script with a non-zero exit code
 
 except Exception as e:        
     logging.error(f"An unexpected error occurred: {e}")
-    sys.exit(0) # Exit the script with a non-zero exit code  
+    sys.exit(1) # Exit the script with a non-zero exit code  
 
 # to create the initial hash
 logging.info("create initial hash")
@@ -46,8 +46,8 @@ while True:
 		currentHash = hashlib.sha224(response).hexdigest()		
 
 		# wait for 30 seconds
-		logging.info("wait 3o seconds")
-		time.sleep(30)		
+		logging.info("wait 60 seconds")
+		time.sleep(60)		
 
 		# perform the get request
 		logging.info("GET request to url")
@@ -78,8 +78,8 @@ while True:
 			currentHash = hashlib.sha224(response).hexdigest()			
 
 			# wait for 30 seconds
-			logging.info("wait 3o seconds")
-			time.sleep(30)			
+			logging.info("wait 6o seconds")
+			time.sleep(60)			
 			continue
 
 	# To handle exceptions
@@ -87,13 +87,13 @@ while True:
 		logging.error("Failed to open URL")
 		#logging.exception('')
 		logging.error("exit the script")
-		sys.exit(0) # Exit the script with a non-zero exit code		
+		sys.exit(1) # Exit the script with a non-zero exit code		
     
 	except Exception as e:
 		logging.error("An error occurred")
 		#logging.exception('')
 		logging.error("exit the script")
-		sys.exit(0) # Exit the script with a non-zero exit code
+		sys.exit(1) # Exit the script with a non-zero exit code
 
 
 		
