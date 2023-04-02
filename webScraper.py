@@ -9,7 +9,7 @@ import urllib.error
 from requests.exceptions import RequestException
 
 # create logger
-logging.basicConfig(filename='web_scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='web-scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info("script started")
 
 try:
