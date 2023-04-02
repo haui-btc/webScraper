@@ -110,4 +110,4 @@ def send_email():
         logging.error(f"Failed to send email: {str(e)}")
 
 # activate function for testing
-send_email() 
+#send_email() 
