@@ -43,3 +43,175 @@
 2023-04-02 20:36:52,365 - INFO - terminate chrome process...
 2023-04-02 20:36:52,582 - INFO - connection closed
 2023-04-02 20:36:52,582 - INFO - terminate chrome process...
+2023-04-02 21:19:15,758 - INFO - script started
+2023-04-02 21:20:02,601 - INFO - script started
+2023-04-02 21:20:57,770 - INFO - script started
+2023-04-02 21:20:57,770 - INFO - script started
+2023-04-02 21:20:57,770 - INFO - reading defined url
+2023-04-02 21:20:57,770 - INFO - GET request to url
+2023-04-02 21:20:57,944 - INFO - create initial hash
+2023-04-02 21:20:57,944 - INFO - wait 10 seconds
+2023-04-02 21:21:07,945 - INFO - GET request to url
+2023-04-02 21:21:08,127 - INFO - create hash
+2023-04-02 21:21:08,129 - INFO - wait 60 seconds
+2023-04-02 21:22:08,129 - INFO - GET request to url
+2023-04-02 21:22:08,295 - INFO - create new hash
+2023-04-02 21:22:08,296 - INFO - compare hashes: no changes
+2023-04-02 21:22:08,296 - INFO - compare hashes: detected changes, sending email
+2023-04-02 21:22:08,296 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:22:08,296 - INFO - start HTML session
+2023-04-02 21:22:08,296 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:22:08,447 - INFO - render html
+2023-04-02 21:22:08,558 - INFO - Browser listening on: ws://127.0.0.1:56675/devtools/browser/33c54a3b-6fe6-45fe-9c17-942246fec1d2
+2023-04-02 21:22:10,063 - INFO - parse html with BeatifulSoup
+2023-04-02 21:22:10,075 - INFO - grep defined html elements
+2023-04-02 21:22:10,076 - INFO - grep name and url
+2023-04-02 21:22:10,076 - INFO - grep latest release
+2023-04-02 21:22:10,076 - INFO - create email content with latest release info
+2023-04-02 21:22:10,076 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:22:10,286 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:22:10,416 - INFO - GET request to url
+2023-04-02 21:22:10,621 - INFO - create current hash
+2023-04-02 21:22:10,622 - INFO - wait 6o seconds
+2023-04-02 21:22:29,513 - INFO - terminate chrome process...
+2023-04-02 21:22:29,521 - INFO - connection closed
+2023-04-02 21:22:30,065 - INFO - terminate chrome process...
+2023-04-02 21:22:30,301 - INFO - terminate chrome process...
+2023-04-02 21:22:30,507 - INFO - terminate chrome process...
+2023-04-02 21:22:30,691 - INFO - terminate chrome process...
+2023-04-02 21:22:30,885 - INFO - terminate chrome process...
+2023-04-02 21:22:31,357 - INFO - terminate chrome process...
+2023-04-02 21:23:10,622 - INFO - GET request to url
+2023-04-02 21:23:10,819 - INFO - create hash
+2023-04-02 21:23:10,819 - INFO - wait 60 seconds
+2023-04-02 21:25:57,293 - INFO - script started
+2023-04-02 21:25:57,293 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:25:57,293 - INFO - start HTML session
+2023-04-02 21:25:57,293 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:25:57,419 - INFO - render html
+2023-04-02 21:25:57,539 - INFO - Browser listening on: ws://127.0.0.1:42819/devtools/browser/d6cc3ae6-bcb3-4650-85c7-1bb10fca52d1
+2023-04-02 21:25:58,629 - INFO - parse html with BeatifulSoup
+2023-04-02 21:25:58,638 - INFO - grep defined html elements
+2023-04-02 21:25:58,639 - INFO - grep name and url
+2023-04-02 21:25:58,639 - INFO - grep latest release
+2023-04-02 21:25:58,639 - INFO - create email content with latest release info
+2023-04-02 21:25:58,639 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:25:58,849 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:25:58,974 - INFO - terminate chrome process...
+2023-04-02 21:27:46,118 - INFO - script started
+2023-04-02 21:27:46,119 - INFO - script started
+2023-04-02 21:27:46,119 - INFO - reading defined url
+2023-04-02 21:27:46,119 - INFO - GET request to url
+2023-04-02 21:27:46,311 - INFO - create initial hash
+2023-04-02 21:27:46,312 - INFO - wait 10 seconds
+2023-04-02 21:27:56,312 - INFO - GET request to url
+2023-04-02 21:27:56,501 - INFO - create hash
+2023-04-02 21:27:56,502 - INFO - wait 30 seconds
+2023-04-02 21:28:47,431 - INFO - script started
+2023-04-02 21:28:47,431 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:28:47,431 - INFO - start HTML session
+2023-04-02 21:28:47,431 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:28:47,559 - INFO - render html
+2023-04-02 21:28:47,672 - INFO - Browser listening on: ws://127.0.0.1:52647/devtools/browser/fc36f597-ae52-4a48-8a4c-4d47eb86098c
+2023-04-02 21:28:48,746 - INFO - parse html with BeatifulSoup
+2023-04-02 21:28:48,754 - INFO - grep defined html elements
+2023-04-02 21:28:48,756 - INFO - grep name and url
+2023-04-02 21:28:48,756 - INFO - grep latest release
+2023-04-02 21:28:48,756 - INFO - create email content with latest release info
+2023-04-02 21:28:48,756 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:28:48,930 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:28:49,059 - INFO - terminate chrome process...
+2023-04-02 21:29:36,052 - INFO - script started
+2023-04-02 21:29:36,052 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:29:36,052 - INFO - start HTML session
+2023-04-02 21:29:36,052 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:29:36,180 - INFO - render html
+2023-04-02 21:29:36,300 - INFO - Browser listening on: ws://127.0.0.1:47881/devtools/browser/b2f5371e-9e5b-4d3b-9bad-237eedca498b
+2023-04-02 21:29:37,267 - INFO - parse html with BeatifulSoup
+2023-04-02 21:29:37,277 - INFO - grep defined html elements
+2023-04-02 21:29:37,278 - INFO - grep name and url
+2023-04-02 21:29:37,279 - INFO - grep latest release
+2023-04-02 21:29:37,279 - INFO - create email content with latest release info
+2023-04-02 21:29:37,279 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:29:37,466 - INFO - sending email to: haui_btc@protonmail
+2023-04-02 21:29:37,535 - ERROR - Failed to send email: {'haui_btc@protonmail': (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record')}. Retrying in 5 seconds...
+2023-04-02 21:29:42,535 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:29:42,741 - INFO - sending email to: haui_btc@protonmail
+2023-04-02 21:29:42,811 - ERROR - Failed to send email: {'haui_btc@protonmail': (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record')}. Retrying in 5 seconds...
+2023-04-02 21:29:47,812 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:29:48,009 - INFO - sending email to: haui_btc@protonmail
+2023-04-02 21:29:48,079 - ERROR - Failed to send email: {'haui_btc@protonmail': (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record')}. Retrying in 5 seconds...
+2023-04-02 21:29:53,079 - ERROR - Failed to send email: Failed to send email after multiple attempts. Exiting script.
+2023-04-02 21:29:53,080 - INFO - terminate chrome process...
+2023-04-02 21:30:44,603 - INFO - script started
+2023-04-02 21:30:44,603 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:30:44,603 - INFO - start HTML session
+2023-04-02 21:30:44,603 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:30:44,736 - INFO - render html
+2023-04-02 21:30:44,848 - INFO - Browser listening on: ws://127.0.0.1:34831/devtools/browser/58dfefa5-f6cc-4748-ad3b-678985cbcf11
+2023-04-02 21:30:45,925 - INFO - parse html with BeatifulSoup
+2023-04-02 21:30:45,934 - INFO - grep defined html elements
+2023-04-02 21:30:45,935 - INFO - grep name and url
+2023-04-02 21:30:45,935 - INFO - grep latest release
+2023-04-02 21:30:45,935 - INFO - create email content with latest release info
+2023-04-02 21:30:45,935 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:30:46,378 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:30:46,506 - INFO - terminate chrome process...
+2023-04-02 21:31:57,131 - INFO - script started
+2023-04-02 21:31:57,131 - INFO - script started
+2023-04-02 21:31:57,131 - INFO - reading defined url
+2023-04-02 21:31:57,132 - INFO - GET request to url
+2023-04-02 21:31:57,338 - INFO - create initial hash
+2023-04-02 21:31:57,339 - INFO - wait 10 seconds
+2023-04-02 21:32:07,339 - INFO - GET request to url
+2023-04-02 21:32:07,521 - INFO - create hash
+2023-04-02 21:32:07,521 - INFO - wait 30 seconds
+2023-04-02 21:32:37,521 - INFO - GET request to url
+2023-04-02 21:32:37,728 - INFO - create new hash
+2023-04-02 21:32:37,728 - INFO - compare hashes: no changes
+2023-04-02 21:32:37,728 - INFO - compare hashes: detected changes, sending email
+2023-04-02 21:32:37,728 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:32:37,728 - INFO - start HTML session
+2023-04-02 21:32:37,729 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:32:37,845 - INFO - render html
+2023-04-02 21:32:37,965 - INFO - Browser listening on: ws://127.0.0.1:58251/devtools/browser/4821dfc6-c7df-41a6-8881-3a5010dfcf1b
+2023-04-02 21:32:39,208 - INFO - parse html with BeatifulSoup
+2023-04-02 21:32:39,219 - INFO - grep defined html elements
+2023-04-02 21:32:39,220 - INFO - grep name and url
+2023-04-02 21:32:39,220 - INFO - grep latest release
+2023-04-02 21:32:39,220 - INFO - create email content with latest release info
+2023-04-02 21:32:39,220 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:32:39,397 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:32:39,523 - INFO - GET request to url
+2023-04-02 21:32:39,693 - INFO - create current hash
+2023-04-02 21:32:39,693 - INFO - wait 30 seconds
+2023-04-02 21:33:09,693 - INFO - GET request to url
+2023-04-02 21:33:09,926 - INFO - create hash
+2023-04-02 21:33:09,928 - INFO - wait 30 seconds
+2023-04-02 21:33:39,928 - INFO - GET request to url
+2023-04-02 21:33:40,151 - INFO - create new hash
+2023-04-02 21:33:40,152 - INFO - compare hashes: no changes
+2023-04-02 21:33:40,152 - INFO - compare hashes: detected changes, sending email
+2023-04-02 21:33:40,153 - INFO - run function: 'get_api_release_notes'
+2023-04-02 21:33:40,153 - INFO - start HTML session
+2023-04-02 21:33:40,153 - INFO - store https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api in session
+2023-04-02 21:33:40,276 - INFO - render html
+2023-04-02 21:33:40,397 - INFO - Browser listening on: ws://127.0.0.1:58287/devtools/browser/dd84c367-5513-46a6-8627-e0d97bc73da7
+2023-04-02 21:33:41,497 - INFO - parse html with BeatifulSoup
+2023-04-02 21:33:41,505 - INFO - grep defined html elements
+2023-04-02 21:33:41,506 - INFO - grep name and url
+2023-04-02 21:33:41,506 - INFO - grep latest release
+2023-04-02 21:33:41,506 - INFO - create email content with latest release info
+2023-04-02 21:33:41,506 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-02 21:33:41,700 - INFO - sending email to: haui_btc@protonmail.com
+2023-04-02 21:33:41,821 - INFO - GET request to url
+2023-04-02 21:33:42,035 - INFO - create current hash
+2023-04-02 21:33:42,036 - INFO - wait 30 seconds
+2023-04-02 21:34:00,423 - INFO - terminate chrome process...
+2023-04-02 21:34:00,429 - INFO - connection closed
+2023-04-02 21:34:00,430 - INFO - connection closed
+2023-04-02 21:34:00,855 - INFO - terminate chrome process...
+2023-04-02 21:34:01,087 - INFO - terminate chrome process...
+2023-04-02 21:34:01,299 - INFO - terminate chrome process...
+2023-04-02 21:34:01,497 - INFO - terminate chrome process...
+2023-04-02 21:34:01,666 - INFO - terminate chrome process...

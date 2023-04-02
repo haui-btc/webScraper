@@ -2,7 +2,7 @@
 import time
 import hashlib
 from urllib.request import urlopen, Request
-from releasenoteScraper import *
+from src.releasenoteScraper import *
 import logging
 import sys
 import urllib.error
@@ -46,8 +46,8 @@ while True:
 		currentHash = hashlib.sha224(response).hexdigest()		
 
 		# wait for 30 seconds
-		logging.info("wait 60 seconds")
-		time.sleep(60)		
+		logging.info("wait 30 seconds")
+		time.sleep(30)		
 
 		# perform the get request
 		logging.info("GET request to url")
@@ -78,8 +78,8 @@ while True:
 			currentHash = hashlib.sha224(response).hexdigest()			
 
 			# wait for 30 seconds
-			logging.info("wait 6o seconds")
-			time.sleep(60)			
+			logging.info("wait 30 seconds")
+			time.sleep(30)			
 			continue
 
 	# To handle exceptions

@@ -11,6 +11,11 @@ import datetime
 from requests.exceptions import RequestException
 import logging
 import time
+import configparser
+
+# get config infos
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 # create logger
 logging.basicConfig(filename='web_scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -19,8 +24,8 @@ logging.info("script started")
 # URLs
 baseURL = 'https://www.dynatrace.com'
 apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
-oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
-agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
+#oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
+#agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
 
 # Webscraping
 def get_api_release_notes():
@@ -52,11 +57,11 @@ def get_api_release_notes():
 
 # Email-Settings
 def send_email():
-    SMTPserver = 'mail.gmx.net'
-    sender = 'monitoring.analytics@gmx.ch'
-    destination = ['haui_btc@protonmail.com']
-    USERNAME = "monitoring.analytics@gmx.ch"
-    PASSWORD = "Monitoring2023!"
+    SMTPserver = config.get('EMAIL', 'SMTPserver')
+    sender = config.get('EMAIL', 'sender')
+    destination = config.get('EMAIL', 'destination')
+    USERNAME = config.get('EMAIL', 'USERNAME')
+    PASSWORD = config.get('EMAIL', 'PASSWORD')
 
     # get date    
     date = datetime.datetime.now()
@@ -89,7 +94,7 @@ def send_email():
                 conn = SMTP(SMTPserver)
                 conn.set_debuglevel(False)
                 conn.login(USERNAME, PASSWORD)
-                logging.info("sending email to: " + destination[0])
+                logging.info("sending email to: " + destination)
                 conn.sendmail(sender, destination, msg.as_string())
                 conn.quit()
                 break
@@ -105,4 +110,4 @@ def send_email():
         logging.error(f"Failed to send email: {str(e)}")
 
 # activate function for testing
-# send_email() 
+#send_email() 
