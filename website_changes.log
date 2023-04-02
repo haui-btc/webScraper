@@ -1,0 +1,476 @@
+2023-04-02 18:06:46,293 - INFO - script started
+2023-04-02 18:06:46,293 - INFO - reading defined url
+2023-04-02 18:06:46,294 - INFO - GET request to url
+2023-04-02 18:06:46,354 - ERROR - Failed to open URL
+2023-04-02 18:06:46,354 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:06:46,358 - INFO - create initial hash
+2023-04-02 18:08:34,062 - INFO - script started
+2023-04-02 18:08:34,063 - INFO - reading defined url
+2023-04-02 18:08:34,063 - INFO - GET request to url
+2023-04-02 18:08:34,079 - ERROR - Failed to open URL
+2023-04-02 18:08:34,079 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:08:34,080 - INFO - create initial hash
+2023-04-02 18:09:16,743 - INFO - script started
+2023-04-02 18:09:16,743 - INFO - reading defined url
+2023-04-02 18:09:16,743 - INFO - GET request to url
+2023-04-02 18:09:16,759 - ERROR - Failed to open URL
+2023-04-02 18:09:16,759 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:09:16,761 - INFO - create initial hash
+2023-04-02 18:09:31,268 - INFO - script started
+2023-04-02 18:09:31,268 - INFO - reading defined url
+2023-04-02 18:09:31,269 - INFO - GET request to url
+2023-04-02 18:09:31,284 - ERROR - Failed to open URL
+2023-04-02 18:09:31,284 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:09:31,286 - INFO - create initial hash
+2023-04-02 18:11:11,086 - INFO - script started
+2023-04-02 18:11:11,086 - INFO - reading defined url
+2023-04-02 18:11:11,086 - INFO - GET request to url
+2023-04-02 18:11:11,249 - INFO - create initial hash
+2023-04-02 18:11:11,250 - INFO - wait 10 seconds
+2023-04-02 18:11:34,977 - INFO - script started
+2023-04-02 18:11:34,977 - INFO - reading defined url
+2023-04-02 18:11:34,977 - INFO - GET request to url
+2023-04-02 18:11:34,992 - ERROR - Failed to open URL
+2023-04-02 18:11:34,992 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:11:34,993 - ERROR - exit the script
+2023-04-02 18:11:42,038 - INFO - script started
+2023-04-02 18:11:42,038 - INFO - reading defined url
+2023-04-02 18:11:42,038 - INFO - GET request to url
+2023-04-02 18:11:42,053 - ERROR - Failed to open URL
+2023-04-02 18:11:42,053 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:11:42,055 - ERROR - exit the script
+2023-04-02 18:11:59,854 - INFO - script started
+2023-04-02 18:11:59,854 - INFO - reading defined url
+2023-04-02 18:11:59,854 - INFO - GET request to url
+2023-04-02 18:11:59,870 - ERROR - Failed to open URL
+2023-04-02 18:11:59,870 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:11:59,871 - ERROR - exit the script
+2023-04-02 18:12:21,018 - INFO - script started
+2023-04-02 18:12:21,018 - INFO - reading defined url
+2023-04-02 18:12:21,018 - INFO - GET request to url
+2023-04-02 18:12:21,034 - ERROR - Failed to open URL
+2023-04-02 18:12:21,034 - ERROR - 
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.11/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/websiteChanges.py", line 21, in <module>
+    response = urlopen(url).read()
+               ^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+2023-04-02 18:12:21,035 - ERROR - exit the script
+2023-04-02 18:14:20,437 - INFO - script started
+2023-04-02 18:14:20,437 - INFO - reading defined url
+2023-04-02 18:14:20,437 - INFO - GET request to url
+2023-04-02 18:14:20,453 - ERROR - Failed to open URL
+2023-04-02 18:14:20,453 - ERROR - exit the script
+2023-04-02 18:14:34,647 - INFO - script started
+2023-04-02 18:14:34,647 - INFO - reading defined url
+2023-04-02 18:14:34,648 - INFO - GET request to url
+2023-04-02 18:14:34,665 - ERROR - Failed to open URL
+2023-04-02 18:14:34,665 - ERROR - exit the script
+2023-04-02 18:14:42,182 - INFO - script started
+2023-04-02 18:14:42,182 - INFO - reading defined url
+2023-04-02 18:14:42,182 - INFO - GET request to url
+2023-04-02 18:14:42,197 - ERROR - Failed to open URL
+2023-04-02 18:14:42,197 - ERROR - exit the script
+2023-04-02 18:15:15,382 - INFO - script started
+2023-04-02 18:15:15,382 - INFO - reading defined url
+2023-04-02 18:15:15,382 - INFO - GET request to url
+2023-04-02 18:15:15,566 - INFO - create initial hash
+2023-04-02 18:15:15,567 - INFO - wait 10 seconds
+2023-04-02 18:15:25,567 - INFO - GET request to url
+2023-04-02 18:15:25,740 - INFO - create hash
+2023-04-02 18:15:25,740 - INFO - wait 3o seconds
