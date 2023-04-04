@@ -101,7 +101,7 @@ def send_email():
 
     # Email content
     logging.info("create email content with latest release info")
-    content = f"{date}\n\n\n Hi there, \n\na new Dynatrace SaaS release is available.\n\n{latest_release_name}:\n{latest_release_url}\n\nAll SaaS releases:\n{saasURL}"
+    content = f"{date}\n\n\nHi there,\n\na new Dynatrace SaaS release is available.\n\n{latest_release_name}:\n{latest_release_url}\n\nAll SaaS releases:\n{saasURL}"
     text_subtype = 'plain'    
     subject = "Dynatrace: New SaaS release"
 
@@ -120,8 +120,10 @@ def send_email():
                 conn.login(USERNAME, PASSWORD)
                 logging.info("sending email")
                 conn.sendmail(sender, destination, msg.as_string())
+                logging.info("email sent successfully")                
                 conn.quit()
                 break
+            
             except (smtplib.SMTPException, ConnectionRefusedError) as e:
                 logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...")#, exc_info=True)
                 retries -= 1
