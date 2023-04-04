@@ -1,75 +1,9 @@
-2023-04-04 23:31:23,372 - INFO - start scraping process
-2023-04-04 23:31:23,372 - INFO - script started
-2023-04-04 23:31:23,372 - INFO - reading defined url
-2023-04-04 23:31:23,373 - INFO - GET request
-2023-04-04 23:31:23,558 - INFO - create initial hash
-2023-04-04 23:31:23,558 - INFO - wait 10 seconds
-2023-04-04 23:31:33,558 - INFO - GET request
-2023-04-04 23:31:33,754 - INFO - create hash
-2023-04-04 23:31:33,755 - INFO - wait 30 seconds
-2023-04-04 23:32:03,755 - INFO - GET request
-2023-04-04 23:32:03,910 - INFO - create new hash
-2023-04-04 23:32:03,911 - INFO - compare hashes: detected changes
-2023-04-04 23:32:03,911 - INFO - new HTML session
-2023-04-04 23:32:03,911 - INFO - get https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api
-2023-04-04 23:32:04,443 - INFO - render html
-2023-04-04 23:32:04,554 - INFO - Browser listening on: ws://127.0.0.1:49381/devtools/browser/3e4b8f34-2676-45a3-af59-aba304def6a1
-2023-04-04 23:32:06,349 - INFO - parse html with BeatifulSoup
-2023-04-04 23:32:06,358 - INFO - grep defined html elements
-2023-04-04 23:32:06,359 - INFO - grep name and url
-2023-04-04 23:32:06,359 - INFO - grep latest release
-2023-04-04 23:32:06,359 - INFO - create email content with latest release info
-2023-04-04 23:32:06,360 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:32:06,568 - INFO - sending email
-2023-04-04 23:32:06,616 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:32:11,616 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:32:11,809 - INFO - sending email
-2023-04-04 23:32:11,870 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:32:16,871 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:32:17,078 - INFO - sending email
-2023-04-04 23:32:17,116 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:32:22,117 - ERROR - Failed to send email: Failed to send email after multiple attempts. Exiting script.
-Traceback (most recent call last):
-  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/releasenoteScraper.py", line 128, in send_email
-    raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Failed to send email after multiple attempts. Exiting script.
-2023-04-04 23:32:22,118 - INFO - GET request
-2023-04-04 23:32:22,302 - INFO - create current hash
-2023-04-04 23:32:22,303 - INFO - wait 30 seconds
-2023-04-04 23:32:52,303 - INFO - GET request
-2023-04-04 23:32:52,564 - INFO - create hash
-2023-04-04 23:32:52,565 - INFO - wait 30 seconds
-2023-04-04 23:33:22,565 - INFO - GET request
-2023-04-04 23:33:22,832 - INFO - create new hash
-2023-04-04 23:33:22,833 - INFO - compare hashes: detected changes
-2023-04-04 23:33:22,833 - INFO - new HTML session
-2023-04-04 23:33:22,833 - INFO - get https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api
-2023-04-04 23:33:22,986 - INFO - render html
-2023-04-04 23:33:23,107 - INFO - Browser listening on: ws://127.0.0.1:40947/devtools/browser/59f024ae-5738-4857-9ac7-617696482847
-2023-04-04 23:33:24,341 - INFO - parse html with BeatifulSoup
-2023-04-04 23:33:24,351 - INFO - grep defined html elements
-2023-04-04 23:33:24,352 - INFO - grep name and url
-2023-04-04 23:33:24,352 - INFO - grep latest release
-2023-04-04 23:33:24,352 - INFO - create email content with latest release info
-2023-04-04 23:33:24,352 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:33:24,550 - INFO - sending email
-2023-04-04 23:33:24,592 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:33:29,592 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:33:29,755 - INFO - sending email
-2023-04-04 23:33:29,797 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:33:32,059 - INFO - terminate chrome process...
-2023-04-04 23:33:32,067 - INFO - connection closed
-2023-04-04 23:33:32,068 - INFO - connection closed
-2023-04-04 23:33:34,798 - INFO - connecting to smtp-server: mail.gmx.net
-2023-04-04 23:33:34,996 - INFO - sending email
-2023-04-04 23:33:35,042 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
-2023-04-04 23:33:40,043 - ERROR - Failed to send email: Failed to send email after multiple attempts. Exiting script.
-Traceback (most recent call last):
-  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/releasenoteScraper.py", line 128, in send_email
-    raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Exception: Failed to send email after multiple attempts. Exiting script.
-2023-04-04 23:33:40,044 - INFO - GET request
-2023-04-04 23:33:40,260 - INFO - create current hash
-2023-04-04 23:33:40,262 - INFO - wait 30 seconds
+2023-04-04 23:44:02,713 - INFO - start scraping process
+2023-04-04 23:44:02,713 - INFO - script started
+2023-04-04 23:44:02,713 - INFO - reading defined url
+2023-04-04 23:44:02,713 - INFO - GET request
+2023-04-04 23:44:02,902 - INFO - create initial hash
+2023-04-04 23:44:02,902 - INFO - wait 10 seconds
+2023-04-04 23:44:12,902 - INFO - GET request
+2023-04-04 23:44:13,079 - INFO - create hash
+2023-04-04 23:44:13,080 - INFO - wait 30 seconds
