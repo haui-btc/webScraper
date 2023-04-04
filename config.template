@@ -4,3 +4,6 @@ sender = mail@mail.net
 destination = mail@mail.net
 USERNAME = mail@mail.net
 PASSWORD = <pwd>
+
+[INTERVALL]
+intervall = 60

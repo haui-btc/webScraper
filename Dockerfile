@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./src/ /app/
 
 # Run the command to start the server
-CMD ["python3", "./websiteChanges.py"]
+CMD ["python3", "./webScraper.py"]
