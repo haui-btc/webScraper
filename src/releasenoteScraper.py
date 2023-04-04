@@ -17,8 +17,13 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
+	filename='web-scraper.log', 
+	filemode='w', 
+	level=logging.INFO)
+
 # URLs
-baseURL = 'https://www.dynatrace.'
+baseURL = 'https://www.dynatrace.com'
 apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 #oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
 #agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
@@ -32,7 +37,7 @@ def get_api_release_notes():
         session = HTMLSession()
 
         # Sending a GET request to the API's URL and storing the response in a variable named 'page'
-        logging.info("get" + apiURL)
+        logging.info("get " + apiURL)
         page = session.get(apiURL)
 
         # Rendering the HTML content of the page using the built-in method of the library
@@ -110,17 +115,17 @@ def send_email():
                 conn = SMTP(SMTPserver)
                 conn.set_debuglevel(False)
                 conn.login(USERNAME, PASSWORD)
-                logging.info("sending email to: " + destination)
+                logging.info("sending email")
                 conn.sendmail(sender, destination, msg.as_string())
                 conn.quit()
                 break
             except (smtplib.SMTPException, ConnectionRefusedError) as e:
-                logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...", exc_info=True)
+                logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...")#, exc_info=True)
                 retries -= 1
                 time.sleep(delay)
         
         if retries == 0:
-            raise Exception("Failed to send email after multiple attempts. Exiting script.", exc_info=True)
+            raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
         
     except Exception as e:
         logging.error(f"Failed to send email: {str(e)}", exc_info=True)

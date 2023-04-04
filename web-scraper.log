@@ -1,55 +1,78 @@
-2023-04-04 22:09:41,223 - INFO - script started
-2023-04-04 22:09:41,223 - INFO - reading defined url
-2023-04-04 22:09:41,223 - INFO - GET request
-2023-04-04 22:09:41,240 - ERROR - An unexpected error occurred: <urlopen error [Errno -2] Name or service not known>
+2023-04-04 22:45:28,278 - INFO - start scraping process
+2023-04-04 22:45:28,278 - INFO - script started
+2023-04-04 22:45:28,278 - INFO - reading defined url
+2023-04-04 22:45:28,278 - INFO - GET request
+2023-04-04 22:45:28,468 - INFO - create initial hash
+2023-04-04 22:45:28,468 - INFO - wait 10 seconds
+2023-04-04 22:45:38,468 - INFO - GET request
+2023-04-04 22:45:38,634 - INFO - create hash
+2023-04-04 22:45:38,634 - INFO - wait 30 seconds
+2023-04-04 22:46:08,635 - INFO - GET request
+2023-04-04 22:46:08,813 - INFO - create new hash
+2023-04-04 22:46:08,814 - INFO - compare hashes: detected changes
+2023-04-04 22:46:08,814 - INFO - run function: 'get_api_release_notes'
+2023-04-04 22:46:08,814 - INFO - new HTML session
+2023-04-04 22:46:08,814 - INFO - get https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api
+2023-04-04 22:46:08,970 - INFO - render html
+2023-04-04 22:46:09,083 - INFO - Browser listening on: ws://127.0.0.1:49109/devtools/browser/f00cae2c-5bb7-4d16-9204-283e90de41d6
+2023-04-04 22:46:10,389 - INFO - parse html with BeatifulSoup
+2023-04-04 22:46:10,399 - INFO - grep defined html elements
+2023-04-04 22:46:10,400 - INFO - grep name and url
+2023-04-04 22:46:10,400 - INFO - grep latest release
+2023-04-04 22:46:10,400 - INFO - create email content with latest release info
+2023-04-04 22:46:10,400 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:46:10,583 - INFO - sending email
+2023-04-04 22:46:10,626 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:46:15,627 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:46:15,850 - INFO - sending email
+2023-04-04 22:46:15,892 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:46:20,892 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:46:21,086 - INFO - sending email
+2023-04-04 22:46:21,126 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:46:26,126 - ERROR - Failed to send email: Failed to send email after multiple attempts. Exiting script.
 Traceback (most recent call last):
-  File "/usr/lib64/python3.11/urllib/request.py", line 1348, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers,
-  File "/usr/lib64/python3.11/http/client.py", line 1282, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib64/python3.11/http/client.py", line 1328, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib64/python3.11/http/client.py", line 1277, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib64/python3.11/http/client.py", line 1037, in _send_output
-    self.send(msg)
-  File "/usr/lib64/python3.11/http/client.py", line 975, in send
-    self.connect()
-  File "/usr/lib64/python3.11/http/client.py", line 1447, in connect
-    super().connect()
-  File "/usr/lib64/python3.11/http/client.py", line 941, in connect
-    self.sock = self._create_connection(
-                ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/socket.py", line 827, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-socket.gaierror: [Errno -2] Name or service not known
-
-During handling of the above exception, another exception occurred:
-
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/releasenoteScraper.py", line 128, in send_email
+    raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Failed to send email after multiple attempts. Exiting script.
+2023-04-04 22:46:26,128 - INFO - GET request
+2023-04-04 22:46:26,296 - INFO - create current hash
+2023-04-04 22:46:26,297 - INFO - wait 30 seconds
+2023-04-04 22:46:56,297 - INFO - GET request
+2023-04-04 22:46:56,486 - INFO - create hash
+2023-04-04 22:46:56,487 - INFO - wait 30 seconds
+2023-04-04 22:47:26,487 - INFO - GET request
+2023-04-04 22:47:26,691 - INFO - create new hash
+2023-04-04 22:47:26,692 - INFO - compare hashes: detected changes
+2023-04-04 22:47:26,692 - INFO - run function: 'get_api_release_notes'
+2023-04-04 22:47:26,692 - INFO - new HTML session
+2023-04-04 22:47:26,692 - INFO - get https://www.dynatrace.com/support/help/whats-new/release-notes/dynatrace-api
+2023-04-04 22:47:26,865 - INFO - render html
+2023-04-04 22:47:26,981 - INFO - Browser listening on: ws://127.0.0.1:46773/devtools/browser/9d73a1cf-c392-4762-b636-360454fd221d
+2023-04-04 22:47:28,062 - INFO - parse html with BeatifulSoup
+2023-04-04 22:47:28,072 - INFO - grep defined html elements
+2023-04-04 22:47:28,073 - INFO - grep name and url
+2023-04-04 22:47:28,073 - INFO - grep latest release
+2023-04-04 22:47:28,073 - INFO - create email content with latest release info
+2023-04-04 22:47:28,073 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:47:28,257 - INFO - sending email
+2023-04-04 22:47:28,298 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:47:33,298 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:47:33,504 - INFO - sending email
+2023-04-04 22:47:33,547 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:47:38,547 - INFO - connecting to smtp-server: mail.gmx.net
+2023-04-04 22:47:38,728 - INFO - sending email
+2023-04-04 22:47:38,772 - ERROR - Failed to send email: (550, b'Requested action not taken: mailbox unavailable\ninvalid DNS MX or A/AAAA resource record', 'monitoring.analytics@gmx.c'). Retrying in 5 seconds...
+2023-04-04 22:47:43,772 - ERROR - Failed to send email: Failed to send email after multiple attempts. Exiting script.
 Traceback (most recent call last):
-  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/webScraper.py", line 26, in <module>
-    response = urlopen(url).read()
-               ^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 216, in urlopen
-    return opener.open(url, data, timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 519, in open
-    response = self._open(req, data)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 536, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 496, in _call_chain
-    result = func(*args)
-             ^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 1391, in https_open
-    return self.do_open(http.client.HTTPSConnection, req,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/urllib/request.py", line 1351, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
-2023-04-04 22:09:41,241 - ERROR - exiting the script
+  File "/home/haui/Dokumente/PROGRAMMIEREN/Python/webScraper/src/releasenoteScraper.py", line 128, in send_email
+    raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: Failed to send email after multiple attempts. Exiting script.
+2023-04-04 22:47:43,773 - INFO - GET request
+2023-04-04 22:47:43,949 - INFO - create current hash
+2023-04-04 22:47:43,949 - INFO - wait 30 seconds
+2023-04-04 22:47:57,828 - INFO - terminate chrome process...
+2023-04-04 22:47:57,836 - INFO - connection closed
+2023-04-04 22:47:57,837 - INFO - connection closed
+2023-04-04 22:47:58,555 - INFO - terminate chrome process...

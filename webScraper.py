@@ -12,14 +12,14 @@ from requests.exceptions import RequestException
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 	filename='web-scraper.log', 
 	filemode='w', 
-	level=logging.DEBUG)
+	level=logging.INFO)
 
 logging.info("script started")
 
 try:
     # setting the URL you want to monitor
     logging.info("reading defined url")
-    url = Request('https://www.20min.', headers={'User-Agent': 'Mozilla/5.0'})
+    url = Request('https://www.20min.ch', headers={'User-Agent': 'Mozilla/5.0'})
 
     # to perform a GET request and load the content of the website and store it in a var
     logging.info("GET request")
