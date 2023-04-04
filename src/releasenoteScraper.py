@@ -13,7 +13,7 @@ import logging
 import time
 import configparser
 
-# get config infos
+# get config
 config = configparser.ConfigParser()
 config.read('config.ini')
 
@@ -24,6 +24,7 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 
 # URLs
 baseURL = 'https://www.dynatrace.com'
+saasURL = baseURL + "/support/help/whats-new/release-notes/saas"
 apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 #oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
 #agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
@@ -38,8 +39,8 @@ def get_api_release_notes():
         session = HTMLSession()
 
         # Sending a GET request to the API's URL and storing the response in a variable named 'page'
-        logging.info("get " + apiURL)
-        page = session.get(apiURL)
+        logging.info("get " + saasURL)
+        page = session.get(saasURL)
 
         # Rendering the HTML content of the page using the built-in method of the library
         logging.info("render html")
@@ -87,7 +88,8 @@ def send_email():
 
     # get date    
     date = datetime.datetime.now()
-    date = date.strftime("%d. %B %Y")
+    date = date.strftime("%Y-%m-%d %H:%M:%S")
+
 
     # grep latest release    
     releases = get_api_release_notes()
@@ -98,9 +100,9 @@ def send_email():
 
     # Email content
     logging.info("create email content with latest release info")
-    content = f"Hi there, \n\n a new API release is available. \n\n {date}: \n {latest_release_name} \n {latest_release_url} \n\n All releases:\n {apiURL}"
+    content = f"{date} - {time} \n\n\n Hi there, \n\na new Dynatrace SaaS release is available.\n\n{latest_release_name}:\n{latest_release_url}\n\nAll SaaS releases:\n{saasURL}"
     text_subtype = 'plain'    
-    subject = "Dynatrace: New API version"
+    subject = "Dynatrace: New SaaS release"
 
     try:
         msg = MIMEText(content, text_subtype)
@@ -126,9 +128,12 @@ def send_email():
         
         if retries == 0:
             raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
-        
+            logging.error("exiting the script")
+            
+    
     except Exception as e:
         logging.error(f"Failed to send email: {str(e)}", exc_info=True)
+        sys.exit(1) # Exit the script with a non-zero exit code 
 
 # activate function for testing
-#send_email() 
+send_email() 
