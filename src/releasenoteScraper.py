@@ -17,45 +17,61 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-# create logger
-logging.basicConfig(filename='web-scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logging.info("script started")
-
 # URLs
-baseURL = 'https://www.dynatrace.com'
+baseURL = 'https://www.dynatrace.'
 apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 #oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
 #agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
 
-# Webscraping
+# Webscraping function
+logging.info("start scraping process")
 def get_api_release_notes():
     try:
-        logging.info("start HTML session")
+        # Initializing a new session with the website to be scraped
+        logging.info("new HTML session")
         session = HTMLSession()
-        logging.info("store " + apiURL + " in session")
+
+        # Sending a GET request to the API's URL and storing the response in a variable named 'page'
+        logging.info("get" + apiURL)
         page = session.get(apiURL)
+
+        # Rendering the HTML content of the page using the built-in method of the library
         logging.info("render html")
         page.html.render()
-        logging.info("parse html with BeatifulSoup")
+
+        # Parsing the HTML content of the page using BeautifulSoup and storing the result in a variable named 'soup'
+        logging.info("parse html with BeatifulSoup")        
         soup = BeautifulSoup(page.html.html, 'html.parser')
-        logging.info("grep defined html elements")
+
+        # lambda function: searching for all HTML tags with 'a' and class 'anchor' and store the result in a variable
+        logging.info("grep defined html elements")        
         results = soup.find_all(lambda tag: tag.name == 'a' and tag.get('class')==['anchor'])
+
+        # Initializing an empty list named 'releases' to store the release notes
         releases = []
+
+        # Looping through all the search results and extracting the release names and URLs and appending them to the 'releases' list
         logging.info("grep name and url")
         for result in results:
             release = {}
             release['name'] = result.text
             release['url'] = baseURL + result['href']
             releases.append(release)
+
+        # Returning the list of extracted release notes    
         return releases
+    
+    # Handling any requests exceptions and logging an error message with the specific error message
     except RequestException as e:
-        logging.error(f"An error occurred while making the request: {e}")        
+        logging.error(f"An error occurred while making the request: {e}", exc_info=True)        
         return None
+    
+    # Handling any other unexpected exceptions and logging an error message with the specific error message
     except Exception as e:        
-        logging.error(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}", exc_info=True)
         return None
 
-# Email-Settings
+# Email
 def send_email():
     SMTPserver = config.get('EMAIL', 'SMTPserver')
     sender = config.get('EMAIL', 'sender')
@@ -99,15 +115,15 @@ def send_email():
                 conn.quit()
                 break
             except (smtplib.SMTPException, ConnectionRefusedError) as e:
-                logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...")
+                logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...", exc_info=True)
                 retries -= 1
                 time.sleep(delay)
         
         if retries == 0:
-            raise Exception("Failed to send email after multiple attempts. Exiting script.")
+            raise Exception("Failed to send email after multiple attempts. Exiting script.", exc_info=True)
         
     except Exception as e:
-        logging.error(f"Failed to send email: {str(e)}")
+        logging.error(f"Failed to send email: {str(e)}", exc_info=True)
 
 # activate function for testing
 #send_email() 

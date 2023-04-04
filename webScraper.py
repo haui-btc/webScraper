@@ -9,24 +9,30 @@ import urllib.error
 from requests.exceptions import RequestException
 
 # create logger
-logging.basicConfig(filename='web-scraper.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
+	filename='web-scraper.log', 
+	filemode='w', 
+	level=logging.DEBUG)
+
 logging.info("script started")
 
 try:
     # setting the URL you want to monitor
     logging.info("reading defined url")
-    url = Request('https://www.20min.ch', headers={'User-Agent': 'Mozilla/5.0'})
+    url = Request('https://www.20min.', headers={'User-Agent': 'Mozilla/5.0'})
 
     # to perform a GET request and load the content of the website and store it in a var
-    logging.info("GET request to url")
+    logging.info("GET request")
     response = urlopen(url).read()
     
 except RequestException as e:
-    logging.error(f"An error occurred while making the request: {e}")
+    logging.error(f"An error occurred while making the request: {e}", exc_info=True)    
+    logging.error("exiting the script")
     sys.exit(1) # Exit the script with a non-zero exit code
 
 except Exception as e:        
-    logging.error(f"An unexpected error occurred: {e}")
+    logging.error(f"An unexpected error occurred: {e}", exc_info=True)    
+    logging.error("exiting the script")
     sys.exit(1) # Exit the script with a non-zero exit code  
 
 # to create the initial hash
@@ -38,7 +44,7 @@ time.sleep(10)
 while True:
 	try:
 		# perform the get request and store it in a var
-		logging.info("GET request to url")
+		logging.info("GET request")
 		response = urlopen(url).read()
 
 		# create a hash
@@ -50,7 +56,7 @@ while True:
 		time.sleep(30)		
 
 		# perform the get request
-		logging.info("GET request to url")
+		logging.info("GET request")
 		response = urlopen(url).read()
 		
 		# create a new hash
@@ -58,19 +64,20 @@ while True:
 		newHash = hashlib.sha224(response).hexdigest()		
 
 		# check if new hash is same as the previous hash
-		logging.info("compare hashes: no changes")
-		if newHash == currentHash:			
+		if newHash == currentHash:
+			print("compare hashes: no changes")	
+			logging.info("compare hashes: no changes")		
 			continue				
 
 		# if something changed in the hashes
 		else:
 			# notify
-			print("detected changes on website, sending email")
-			logging.info("compare hashes: detected changes, sending email")
+			print("compare hashes: detected changes, sending email")
+			logging.info("compare hashes: detected changes")
 			send_email()
 
 			# again read the website
-			logging.info("GET request to url")
+			logging.info("GET request")
 			response = urlopen(url).read()			
 
 			# create a hash
@@ -84,15 +91,13 @@ while True:
 
 	# To handle exceptions
 	except urllib.error.URLError as e:
-		logging.error("Failed to open URL")
-		#logging.exception('')
-		logging.error("exit the script")
+		logging.error(f"Failed to load URL: {e}", exc_info=True)	
+		logging.error("exiting the script")
 		sys.exit(1) # Exit the script with a non-zero exit code		
     
 	except Exception as e:
-		logging.error("An error occurred")
-		#logging.exception('')
-		logging.error("exit the script")
+		logging.error(f"An error accurred: {e}", exc_info=True)	
+		logging.error("exiting the script")
 		sys.exit(1) # Exit the script with a non-zero exit code
 
 
