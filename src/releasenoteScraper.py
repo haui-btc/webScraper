@@ -76,7 +76,8 @@ def get_api_release_notes():
     # Handling any other unexpected exceptions and logging an error message with the specific error message
     except Exception as e:        
         logging.error(f"An unexpected error occurred: {e}", exc_info=True)
-        return None
+        return None  
+    
 
 # Email
 def send_email():

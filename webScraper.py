@@ -7,6 +7,11 @@ import logging
 import sys
 import urllib.error
 from requests.exceptions import RequestException
+import configparser
+
+# get config
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 # create logger
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
@@ -52,8 +57,8 @@ while True:
 		currentHash = hashlib.sha224(response).hexdigest()		
 
 		# wait for 30 seconds
-		logging.info("wait 30 seconds")
-		time.sleep(30)		
+		logging.info(f"wait  ... seconds")
+		time.sleep(config.get('INTERVALL', 'intervall'))		
 
 		# perform the get request
 		logging.info("GET request")
@@ -85,8 +90,8 @@ while True:
 			currentHash = hashlib.sha224(response).hexdigest()			
 
 			# wait for 30 seconds
-			logging.info("wait 30 seconds")
-			time.sleep(30)			
+			logging.info(f"wait  ... seconds")
+			time.sleep(config.get('INTERVALL', 'intervall'))		
 			continue
 
 	# To handle exceptions
