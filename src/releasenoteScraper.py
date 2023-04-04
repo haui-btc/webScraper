@@ -30,6 +30,7 @@ apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 
 # Webscraping function
 logging.info("start scraping process")
+
 def get_api_release_notes():
     try:
         # Initializing a new session with the website to be scraped
@@ -88,8 +89,7 @@ def send_email():
     date = datetime.datetime.now()
     date = date.strftime("%d. %B %Y")
 
-    # grep latest release
-    logging.info("run function: 'get_api_release_notes'")
+    # grep latest release    
     releases = get_api_release_notes()
     logging.info("grep latest release")
     latest_release = releases[0]

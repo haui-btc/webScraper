@@ -26,12 +26,12 @@ try:
     response = urlopen(url).read()
     
 except RequestException as e:
-    logging.error(f"An error occurred while making the request: {e}", exc_info=True)    
+    logging.error(f"An error occurred while making the request: {e}")
     logging.error("exiting the script")
     sys.exit(1) # Exit the script with a non-zero exit code
 
 except Exception as e:        
-    logging.error(f"An unexpected error occurred: {e}", exc_info=True)    
+    logging.error(f"An unexpected error occurred: {e}", exc_info=True)   
     logging.error("exiting the script")
     sys.exit(1) # Exit the script with a non-zero exit code  
 
