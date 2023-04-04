@@ -89,7 +89,7 @@ def send_email():
 
     # get date    
     date = datetime.datetime.now()
-    date = date.strftime("%Y-%m-%d %H:%M:%S")
+    date = date.strftime("%Y.%m.%d")
 
 
     # grep latest release    
@@ -101,7 +101,7 @@ def send_email():
 
     # Email content
     logging.info("create email content with latest release info")
-    content = f"{date} - {time} \n\n\n Hi there, \n\na new Dynatrace SaaS release is available.\n\n{latest_release_name}:\n{latest_release_url}\n\nAll SaaS releases:\n{saasURL}"
+    content = f"{date}\n\n\n Hi there, \n\na new Dynatrace SaaS release is available.\n\n{latest_release_name}:\n{latest_release_url}\n\nAll SaaS releases:\n{saasURL}"
     text_subtype = 'plain'    
     subject = "Dynatrace: New SaaS release"
 
@@ -137,4 +137,4 @@ def send_email():
         sys.exit(1) # Exit the script with a non-zero exit code 
 
 # activate function for testing
-send_email() 
+#send_email() 

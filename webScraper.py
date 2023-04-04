@@ -57,8 +57,8 @@ while True:
 		currentHash = hashlib.sha224(response).hexdigest()		
 
 		# wait for 30 seconds
-		logging.info(f"wait  ... seconds")
-		time.sleep(config.get('INTERVALL', 'intervall'))		
+		logging.info("wait " + config.get('INTERVALL', 'intervall') + " seconds")
+		time.sleep(int(config.get('INTERVALL', 'intervall')))		
 
 		# perform the get request
 		logging.info("GET request")
@@ -90,8 +90,8 @@ while True:
 			currentHash = hashlib.sha224(response).hexdigest()			
 
 			# wait for 30 seconds
-			logging.info(f"wait  ... seconds")
-			time.sleep(config.get('INTERVALL', 'intervall'))		
+			logging.info(f"wait " + config.get('INTERVALL', 'intervall') + " seconds")
+			time.sleep(int(config.get('INTERVALL', 'intervall')))		
 			continue
 
 	# To handle exceptions
