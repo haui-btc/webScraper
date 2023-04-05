@@ -1,5 +1,5 @@
 # webScraper
-
+```bash
 .
 |-- Dockerfile
 |-- README.md
@@ -16,3 +16,4 @@
     `-- scraper_email.py
 
 3 directories, 10 files
+```
