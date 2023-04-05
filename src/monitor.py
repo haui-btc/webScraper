@@ -42,6 +42,11 @@ def website_monitor():
         logging.error(f"An unexpected error occurred: {e}", exc_info=True)    
         logging.error("exiting the script")
         sys.exit(1) # Exit the script with a non-zero exit code  
+    
+    except KeyboardInterrupt as ex:
+        print('goodbye!')
+        logging.error("adios! exiting the script")
+        sys.exit(1) # Exit the script with a non-zero exit code  
 
     # to create the initial hash
     logging.info("create initial hash")
@@ -107,7 +112,12 @@ def website_monitor():
             logging.error(f"An error occurred: {e}", exc_info=True)    
             logging.error("exiting the script")
             sys.exit(1) # Exit the script with a non-zero exit code
-
+            
+        except KeyboardInterrupt as ex:
+            print('goodbye!')
+            logging.error("adios! exiting the script")
+            sys.exit(1) # Exit the script with a non-zero exit code  
+        
 
 if __name__ == "__main__":
     website_monitor()
