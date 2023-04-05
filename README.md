@@ -18,12 +18,11 @@
 3 directories, 10 files
 ```
 
-## config file
+## config.template
 
 Change values and rename file to config.ini
 
 ```bash
-root@ct-Docker:~/docker-stuff/webScraper# cat config.template 
 [EMAIL]
 SMTPserver = mail.xyz.net
 sender = mail@mail.net
