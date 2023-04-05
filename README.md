@@ -1,6 +1,5 @@
 # webScraper
 > Monitor a website and send an email if anything changes.
-> Generated logfile: web-scraper.log
 ```bash
 .
 |-- Dockerfile
