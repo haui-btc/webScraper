@@ -6,11 +6,7 @@ import urllib.error
 from urllib.request import Request, urlopen
 from urllib.error import URLError
 from requests.exceptions import RequestException
-from src.releasenoteScraper import send_email
-
-
-
-
+from scraper_email import send_email
 
 def website_monitor():
     """
@@ -25,6 +21,7 @@ def website_monitor():
     """
     
     logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+    
     url = 'https://www.20min.ch'
 
     try:
