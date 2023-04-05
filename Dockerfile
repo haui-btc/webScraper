@@ -15,7 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY ./src/ /app/
-COPY ./WEBSCRAPER/ /app/
 
 # Run the command to start the server
-CMD ["python3", "./webScraper.py"]
+CMD ["python3", "./monitor.py"]
