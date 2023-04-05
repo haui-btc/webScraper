@@ -1,4 +1,5 @@
 # webScraper
+> Monitor a website and send an email if anything changes.
 ```bash
 .
 |-- Dockerfile
