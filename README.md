@@ -17,3 +17,20 @@
 
 3 directories, 10 files
 ```
+
+## config file
+
+Change values and rename file to config.ini
+
+```bash
+root@ct-Docker:~/docker-stuff/webScraper# cat config.template 
+[EMAIL]
+SMTPserver = mail.xyz.net
+sender = mail@mail.net
+destination = mail@mail.net
+USERNAME = mail@mail.net
+PASSWORD = <pwd>
+
+[INTERVALL]
+intervall = 60
+```
