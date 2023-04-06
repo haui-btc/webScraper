@@ -16,5 +16,4 @@ RUN pip install -r requirements.txt
 COPY ./app ./app
 
 # Start the monitor.py file with python3
-CMD ["python3", "./monitor.py"]
-
+CMD ["python3", "monitor.py"]
