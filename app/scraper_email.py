@@ -20,7 +20,7 @@ config.read('config.ini')
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 	filename='web-scraper.log', 
 	filemode='w', 
-	level=logging.INFO)
+	level=logging.DEBUG)
 
 # URLs
 baseURL = 'https://www.dynatrace.com'
