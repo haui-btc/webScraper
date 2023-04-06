@@ -5,5 +5,9 @@ destination = mail@mail.net
 USERNAME = mail@mail.net
 PASSWORD = <pwd>
 
+retries = <int>
+delay = <int>
+
+
 [INTERVALL]
-intervall = 60
+intervall = <int>
