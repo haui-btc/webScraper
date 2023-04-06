@@ -1,5 +1,6 @@
 # webScraper
-> Monitor a website and send an email if anything changes.
+> Monitors a website for changes by comparing the hash of the website's content
+    at different times and send an email if anything changes.
 ```bash
 .
 |-- Dockerfile
