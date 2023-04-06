@@ -8,6 +8,5 @@ PASSWORD = <pwd>
 retries = <int>
 delay = <int>
 
-
 [INTERVALL]
 intervall = <int>

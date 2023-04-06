@@ -94,7 +94,7 @@ def send_email():
 
     # get date    
     date = datetime.datetime.now()
-    date = date.strftime("%Y.%m.%d")
+    date = date.strftime("%d %B.%Y")
 
 
     # grep latest release    

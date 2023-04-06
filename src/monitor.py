@@ -81,8 +81,8 @@ def website_monitor():
 
             # create a new hash
             logging.info("create new hash")
-            newHash = hashlib.sha224(response).hexdigest()        
-
+            newHash = hashlib.sha224(response).hexdigest()   
+        
             # check if new hash is same as the previous hash
             if newHash == currentHash:
                 print("compare hashes: no changes")    
@@ -106,8 +106,8 @@ def website_monitor():
 
                 # wait for X seconds
                 logging.info("wait " + intervall + " seconds")
-                time.sleep(int(intervall))        
-                continue
+                time.sleep(int(intervall))  
+                continue                
 
         # To handle exceptions
         except URLError as e:
