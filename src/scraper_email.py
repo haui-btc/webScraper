@@ -78,6 +78,11 @@ def get_api_release_notes():
         logging.error(f"An unexpected error occurred: {e}", exc_info=True)
         return None  
     
+    except KeyboardInterrupt as ex:
+        print("adios!")
+        logging.error("adios! exiting the script")
+        sys.exit(1) # Exit the script with a non-zero exit code  
+    
 
 # Email
 def send_email():
@@ -110,8 +115,8 @@ def send_email():
         msg['Subject']= subject
         msg['From']   = sender # some SMTP servers will do this automatically, not all
 
-        retries = 3
-        delay = 5 # seconds
+        retries = int(config.get('EMAIL','retries'))
+        delay = int(config.get('EMAIL','delay'))
         while retries:
             try:
                 logging.info("connecting to smtp-server: " + SMTPserver)
@@ -128,6 +133,11 @@ def send_email():
                 logging.error(f"Failed to send email: {str(e)}. Retrying in {delay} seconds...")#, exc_info=True)
                 retries -= 1
                 time.sleep(delay)
+            
+            except KeyboardInterrupt as ex:
+                print("adios!")
+                logging.error("adios! exiting the script")
+                sys.exit(1) # Exit the script with a non-zero exit code                                             
         
         if retries == 0:
             raise Exception("Failed to send email after multiple attempts. Exiting script.")#, exc_info=True)
@@ -137,6 +147,11 @@ def send_email():
     except Exception as e:
         logging.error(f"Failed to send email: {str(e)}", exc_info=True)
         sys.exit(1) # Exit the script with a non-zero exit code 
+
+    except KeyboardInterrupt as ex:
+        print("adios!")
+        logging.error("adios! exiting the script")
+        sys.exit(1) # Exit the script with a non-zero exit code  
 
 # activate function for testing
 #send_email() 

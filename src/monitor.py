@@ -7,6 +7,13 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError
 from requests.exceptions import RequestException
 from scraper_email import send_email
+import configparser
+
+# get config
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+intervall = config.get('INTERVALL', 'intervall')
 
 def website_monitor():
     """
@@ -64,9 +71,9 @@ def website_monitor():
             logging.info("create hash")
             currentHash = hashlib.sha224(response).hexdigest()        
 
-            # wait for 30 seconds
-            logging.info("wait 30 seconds")
-            time.sleep(30)        
+            # wait for X seconds
+            logging.info("wait " + intervall + " seconds")
+            time.sleep(int(intervall))
 
             # perform the get request
             logging.info("GET request")
@@ -97,9 +104,9 @@ def website_monitor():
                 logging.info("create current hash")
                 currentHash = hashlib.sha224(response).hexdigest()            
 
-                # wait for 30 seconds
-                logging.info("wait 30 seconds")
-                time.sleep(30)            
+                # wait for X seconds
+                logging.info("wait " + intervall + " seconds")
+                time.sleep(int(intervall))        
                 continue
 
         # To handle exceptions
@@ -114,7 +121,7 @@ def website_monitor():
             sys.exit(1) # Exit the script with a non-zero exit code
             
         except KeyboardInterrupt as ex:
-            print('goodbye!')
+            print("adios!")
             logging.error("adios! exiting the script")
             sys.exit(1) # Exit the script with a non-zero exit code  
         
