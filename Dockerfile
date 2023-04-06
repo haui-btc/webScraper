@@ -5,8 +5,7 @@ FROM python:3.11-slim-buster
 RUN pip install --upgrade pip
 
 # Set the working directory to /app
-WORKDIR /webscraper-app
-
+WORKDIR /app
 # Copy the requirements.txt file to the container
 COPY requirements.txt .
 
@@ -14,7 +13,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the entire src directory to the container's /app directory
-COPY ./src ./src
+COPY ./app ./app
 
 # Start the monitor.py file with python3
 CMD ["python3", "./src/monitor.py"]
