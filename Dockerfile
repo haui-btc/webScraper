@@ -5,17 +5,17 @@ FROM python:3.11-slim-buster
 RUN pip install --upgrade pip
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /webscraper-app
 
 # Copy the requirements.txt file to the container
 COPY requirements.txt .
 
 # Install the dependencies specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the entire src directory to the container's /app directory
-COPY ./src /app/
+COPY ./src ./src
 
 # Start the monitor.py file with python3
-CMD ["python3", "monitor.py"]
+CMD ["python3", "./src/monitor.py"]
 
