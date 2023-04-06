@@ -6,7 +6,9 @@ USERNAME = mail@mail.net
 PASSWORD = <pwd>
 
 retries = <int>
+# in seconds
 delay = <int>
 
 [INTERVALL]
+# in seconds
 intervall = <int>
