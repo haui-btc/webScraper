@@ -3,31 +3,24 @@
     at different times and send an email if anything changes.
 ```bash
 .
-├── app
-│   ├── monitor.py
-│   ├── __pycache__
-│   │   ├── releasenoteScraper.cpython-311.pyc
-│   │   └── scraper_email.cpython-311.pyc
-│   └── scraper_email.py
-├── backup
-│   ├── config.ini
-│   ├── Dockerfile
-│   ├── Dockerfile_backup
-│   ├── releasenoteScraper.py
-│   └── webScraper.py
-├── config.ini
-├── config.template
-├── docker-compose.debug.yml
-├── docker-compose.yml
-├── Dockerfile
-├── __pycache__
-│   ├── email.cpython-311.pyc
-│   └── releasenoteScraper.cpython-311.pyc
-├── README.md
-├── requirements.txt
-└── web-scraper.log
+|-- Dockerfile
+|-- README.md
+|-- __pycache__
+|   |-- email.cpython-311.pyc
+|   `-- releasenoteScraper.cpython-311.pyc
+|-- app
+|   |-- __pycache__
+|   |   |-- releasenoteScraper.cpython-311.pyc
+|   |   `-- scraper_email.cpython-311.pyc
+|   |-- monitor.py
+|   `-- scraper_email.py
+|-- config.ini
+|-- config.template
+|-- docker-compose.debug.yml
+|-- docker-compose.yml
+`-- requirements.txt
 
-5 directories, 19 files
+3 directories, 13 files
 ```
 
 ## config.template
