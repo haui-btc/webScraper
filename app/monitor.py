@@ -13,7 +13,11 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-intervall = config.get('INTERVALL', 'intervall')
+# logging 
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
+	filename='web-scraper.log', 
+	filemode='w', 
+	level=logging.INFO)
 
 def website_monitor():
     """
@@ -25,11 +29,9 @@ def website_monitor():
     
     Returns:
     None
-    """
-    
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
-    
-    url = 'https://www.20min.ch'
+    """     
+    url = config.get('URL', 'monitor')
+    intervall = config.get('INTERVALL', 'intervall')
 
     try:
         # setting the URL you want to monitor

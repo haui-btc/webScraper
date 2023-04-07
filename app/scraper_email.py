@@ -17,17 +17,18 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
+# logging 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 	filename='web-scraper.log', 
 	filemode='w', 
-	level=logging.DEBUG)
+	level=logging.INFO)
 
 # URLs
-baseURL = 'https://www.dynatrace.com'
+baseURL = "https://www.dynatrace.com"
 saasURL = baseURL + "/support/help/whats-new/release-notes/saas"
-apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
+#apiURL = baseURL + '/support/help/whats-new/release-notes/dynatrace-api'
 #oaURL = baseURL + '/support/help/whats-new/release-notes//oneagent'
-#agURL = baseURL + '/support/help/whats-new/release-notes//activegate'
+#agURL = baseURL + '/support/help/whats-new/release-notes//activegate' 
 
 # Webscraping function
 logging.info("start scraping process")
@@ -117,6 +118,7 @@ def send_email():
 
         retries = int(config.get('EMAIL','retries'))
         delay = int(config.get('EMAIL','delay'))
+
         while retries:
             try:
                 logging.info("connecting to smtp-server: " + SMTPserver)
@@ -154,4 +156,4 @@ def send_email():
         sys.exit(1) # Exit the script with a non-zero exit code  
 
 # activate function for testing
-#send_email() 
+send_email() 
