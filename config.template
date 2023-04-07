@@ -15,4 +15,4 @@ intervall = <int>
 
 [URL] 
 # website to monitor
-monitor = https://www.20min.ch
+monitor = <url>
