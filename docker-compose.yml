@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   webscraper:
-    image: webscraper
+    image: web_scraper
     build:
       context: .
       dockerfile: ./Dockerfile
