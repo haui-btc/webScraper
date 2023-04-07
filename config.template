@@ -6,9 +6,13 @@ USERNAME = mail@mail.net
 PASSWORD = <pwd>
 
 retries = <int>
-# in seconds
+# delay after smtp-connection retry in seconds
 delay = <int>
 
 [INTERVALL]
-# in seconds
+# website monitoring frequence in seconds
 intervall = <int>
+
+[URL] 
+# website to monitor
+monitor = https://www.20min.ch

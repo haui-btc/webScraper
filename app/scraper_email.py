@@ -156,4 +156,4 @@ def send_email():
         sys.exit(1) # Exit the script with a non-zero exit code  
 
 # activate function for testing
-send_email() 
+#send_email() 
