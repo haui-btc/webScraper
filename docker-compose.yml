@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   webscraper:
+    container_name: webscraper
     image: web_scraper
     build:
       context: .
