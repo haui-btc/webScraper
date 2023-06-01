@@ -53,7 +53,7 @@ def website_monitor():
         sys.exit(1) # Exit the script with a non-zero exit code  
     
     except KeyboardInterrupt as ex:
-        print('goodbye!')
+        print("adios!")
         logging.error("adios! exiting the script")
         sys.exit(1) # Exit the script with a non-zero exit code  
 
